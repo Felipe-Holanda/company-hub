@@ -1,0 +1,257 @@
+@keyframes colorFade{
+    from{
+        background: #8F58FE;
+    }to{
+        background: #579DFD;
+    }
+}
+
+@keyframes colorUnfade{
+    from{
+        background: #579DFD;
+    }to{
+        background: #8F58FE;
+    }
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 2em;
+    background: rgb(143,88,254);
+    margin: 0;
+    background: linear-gradient(145deg, rgba(143,88,254,1) 13%, rgba(114,94,224,1) 38%, rgba(100,140,254,1) 66%, rgba(87,157,253,1) 94%);
+    color: white;
+    box-shadow: 0 0 .3em rgba(0,0,0,.2);
+}
+
+header a:hover{
+    cursor: pointer;
+}
+
+header button{
+    border: none;
+    padding: 1em 1.5em;
+    margin: .5em;
+    color: white;
+    font-weight: bold;
+    background: #8F58FE;
+    border-radius: .5em;
+    box-shadow: 0 0 .3em rgba(0,0,0,.2);
+}
+
+header button:hover{
+    cursor: pointer;
+    animation: colorFade .5s forwards;
+    box-shadow: 0 0 .6em rgba(0,0,0,.5);
+}
+
+header button:not(:hover){
+    animation: colorUnfade .5s forwards;
+}
+
+main{
+    margin: 0;
+}
+
+main #presentation{
+    background: url('../assets/backImageBlack.png') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 5em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #presentation h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+main #presentation p{
+    font-size: 24px;
+    text-align: center;
+}
+
+main #presentation button{
+    border: none;
+    background: #8F58FE;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: .5em 1em;
+    border-radius: .5em;
+    font-size: 24px;
+}
+
+main #presentation button:hover{
+    cursor: pointer;
+    animation: colorFade .5s forwards ;
+}
+
+main #presentation button:not(:hover){
+    animation: colorUnfade .5s forwards;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container section{
+    display: flex;
+    line-height: 2em;
+    margin-top: 3em;
+}
+
+.container section .img1{
+    width: 40em;
+    border-radius: 1em;
+    box-shadow: 0 0 .3em rgba(0,0,0,.2);
+    margin: 1em;
+}
+
+.container section .img2{
+    width: 30em;
+    border-radius: 1em;
+    box-shadow: 0 0 .3em rgba(0,0,0,.2);
+    margin: 3em;
+}
+
+.container .left{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.container .right{
+    width: 50%;
+    float: right;
+    text-align: end;
+}
+
+.reviewImg{
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    margin: 2em 0;
+}
+
+#review{
+    padding: 2em 4em;
+    background-color: #8F58FE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+#review div{
+    background-color: white;
+    width: 30%;
+    height: 512px;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    color: rgba(0,0,0,.8);
+    margin-bottom: 2em;
+    outline: 1px solid grey;
+    box-shadow: 0 0 .6em rgba(0,0,0,.2);
+    margin: 0 1em ;
+}
+
+#review #name{
+    font-weight: bold;
+    line-height: normal;
+}
+
+#review #class{
+    color: rgba(0,0,0,.8)
+}
+
+#newsletter{
+    background-color: #725EE0;
+    padding: 5em;
+    text-align: center;
+    color: white;
+}
+
+form input{
+    margin: 0;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    outline: 1px solid gray;
+}
+
+form button{
+    margin: 0;
+    padding: 1em 2em;
+    border: none;
+    background-color: #579DFD;
+    color: white;
+    font-weight: bolder;
+    font-size: 13px;
+    border-radius: 0 1em 1em 0;
+}
+
+footer{
+    background-color: #5c4bbd;
+    padding: 5em 10em;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+}
+
+footer.group{
+    line-height: 10px;
+}
+
+#done i{
+    font-size: 100px;
+}
+
+#fabBtn{
+    background-color: #2d255f;
+    color: white;
+    padding: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    font-size: 33px;
+    border-radius: 100%;
+    box-shadow: 0 0 1em rgba(0,0,0,.5);
+    position: fixed;
+    top: 80%;
+    left: 90%
+}
