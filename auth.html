@@ -9,8 +9,27 @@
     <title>Orbital Suite | Login</title>
 </head>
 <body>
-    <form id="login"></form>
-    <form id="register"></form>
+    <form style="display: none" id="login">
+        <div>
+            <h1>Entrar</h1>
+            <span class='bx bx-x'></span>
+            <input type="email" placeholder="Insira o seu e-mail">
+            <input type="password" placeholder="Insira a sua senha">
+            <button type="submit">Logar</button>
+        </div>
+    </form>
+    <form id="register">
+        <div>
+            <h1>Cadastrar</h1>
+            <span class='bx bx-x'></span>
+            <input type="text" placeholder="Insira o seu nome">
+            <input type="email" placeholder="Insira o seu e-mail">
+            <input type="password" placeholder="Insira a sua senha">
+            <input type="password" placeholder="Confirme a sua senha">
+            <input type="text" placeholder="Insira seu nível profissional">
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
     <header>
         <i class='bx bx-arrow-back'></i>
     </header>
@@ -38,5 +57,6 @@
     <script src="./src/libs/wavify.js"></script>
     <script src="./src/libs/jquery.wavify.js"></script>
     <script src="./src/scripts/authWaves.js"></script>
+    <script src="./src/scripts/authPage.js"></script>
 </body>
 </html>

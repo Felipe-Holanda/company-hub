@@ -99,7 +99,7 @@ svg {
     animation: slideUp 2.5s ease-in-out;
 }
 
-i:hover{
+header i:hover{
     background-color: rgba(255,255,255,.5);
     box-shadow: 0 0 100px rgba(0, 0, 0, .2);
 }
@@ -118,7 +118,7 @@ main p{
     font-size: 20px;
 }
 
-main button{
+button{
     border: none;
     padding: 1em 2em;
     font-size: 15px;
@@ -128,8 +128,74 @@ main button{
     background: linear-gradient(145deg, rgba(99,54,166,1) 0%, rgba(87,157,253,1) 100%); 
 }
 
-main button:hover{
+button:hover{
     cursor: pointer;
     background: rgb(110, 60, 185);
     background: linear-gradient(145deg, rgb(109, 59, 184) 0%, rgb(101, 163, 250) 100%); 
+}
+
+/* MODAL */
+
+#login, #register{
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login div, #register div{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    text-align: center;
+    border-radius: .5em;
+    box-shadow: 0 0 100px gray;
+}
+
+#login div h1, #register div h1{
+    color:rgb(110, 60, 185);
+    margin-bottom: 1em;
+}
+
+#login div input, #register div input{
+    border: none;
+    outline: 1px solid gray;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    border-radius: .5em;
+}
+
+form div span{
+    transform: translate(14em,-7em);
+    padding: .5em;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    font-weight: bold;
+    background-color: rgb(203, 203, 203);
+    cursor: pointer;
+
+}
+
+form div span:hover{
+    background-color: rgb(193, 193, 193);
+}
+
+#notify{
+    position: fixed;
+    z-index: 99;
+    color: white;
+    margin: .5em;
+    padding: .5em;
+    top: 0;
+    left: 80%;
+    font-weight: bold;
+    border-radius: .2em;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+    outline: .002em solid white;
 }
