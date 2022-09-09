@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^index index.html [NC]
+RewriteRule ^auth auth.html [NC]
+RewriteRule ^dashboard dashboard.html [NC]

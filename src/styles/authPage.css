@@ -1,0 +1,135 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+}
+
+header i{
+    font-size: 40px;
+    color: gray;
+    padding: 1em
+}
+
+@keyframes slideDown{
+    from{
+        transform: translateY(-100%)
+    }to{
+        transform: translateY(0%)
+    }
+}
+
+@keyframes slideUp{
+    from{
+        transform: translateY(100%)
+    }to{
+        transform: translate(0)
+    }
+}
+
+@keyframes focusing{
+    from{
+        scale: .2;
+    }to{
+        scale: 1;
+    }
+}
+
+header:not(:focus){
+    animation: slideDown .5s ease-in-out;
+}
+
+main{
+    align-self: center;
+    margin-top: 2em;
+    background: url('../assets/bgMain.png') 0 0 no-repeat;
+    background-color: white;
+    padding: 3em;
+    width: 65%;
+    border-radius: 1.5em;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+}
+
+main:not(:focus){
+    animation: focusing 1s ease-in-out
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#fineline{
+    height: 15em;
+    width: 1px;
+    border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.leftSide{
+    width: 45%;
+    text-align: end;
+}
+
+.rightSide{
+    width: 45%;
+    text-align: left;
+}
+
+svg {
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+  }
+
+.wave {
+    position: fixed;
+    left:0;
+    right:0;
+    top:85%;
+    bottom:0;
+    z-index: 2;
+  }
+  
+  .wave + .wave {
+    z-index: 1;
+  }
+
+.wave:not(:focus){
+    animation: slideUp 2.5s ease-in-out;
+}
+
+i:hover{
+    background-color: rgba(255,255,255,.5);
+    box-shadow: 0 0 100px rgba(0, 0, 0, .2);
+}
+
+main h2{
+    font-size: 40px;
+    color: #9163d6;
+}
+
+main span{
+    color: #6336a6;
+    font-weight: bold;
+}
+
+main p{
+    font-size: 20px;
+}
+
+main button{
+    border: none;
+    padding: 1em 2em;
+    font-size: 15px;
+    border-radius: .5em;
+    color: white;
+    background: rgb(99,54,166);
+    background: linear-gradient(145deg, rgba(99,54,166,1) 0%, rgba(87,157,253,1) 100%); 
+}
+
+main button:hover{
+    cursor: pointer;
+    background: rgb(110, 60, 185);
+    background: linear-gradient(145deg, rgb(109, 59, 184) 0%, rgb(101, 163, 250) 100%); 
+}

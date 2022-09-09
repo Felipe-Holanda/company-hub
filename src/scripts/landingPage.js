@@ -3,11 +3,11 @@ document.getElementById('done').style.display = 'none'
 const buttons = document.querySelectorAll('button');
 
 buttons[0].addEventListener('click', function (e) {
-    window.location.href = './src/pages/singPage.html'
+    window.location.href = './auth.html'
 })
 
 buttons[1].addEventListener('click', function (e) {
-    window.location.href = './src/pages/singPage.html'
+    window.location.href = './auth.html'
 })
 
 buttons[2].addEventListener('click', function (e) {
@@ -30,5 +30,10 @@ buttons[2].addEventListener('click', function (e) {
 
 const fabBtn = document.getElementById('fabBtn')
 fabBtn.addEventListener('click', function (e) {
-    window.scrollTo({ top: 0, behavior: 'slow' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+
+const who = document.querySelector('header a')
+who.addEventListener('click', function (e) {
+    window.scrollTo({ top: 4000, behavior: 'smooth' })
 })
