@@ -85,4 +85,8 @@ allBtn[2].addEventListener('click', () => {
     div.append(nav)
     span.append(div)
     body.append(span)
+
+    i.addEventListener('click', () => {
+        span.remove()
+    })
 })
