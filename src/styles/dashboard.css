@@ -377,3 +377,11 @@ section ul li:hover{
 section ul li:not(:hover){
     animation: scaleDown 0.2s ease-in-out forwards;
 }
+
+input{
+    margin: 1em;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

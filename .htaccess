@@ -3,3 +3,6 @@ RewriteEngine on
 RewriteRule ^index index.html [NC]
 RewriteRule ^auth auth.html [NC]
 RewriteRule ^dashboard dashboard.html [NC]
+RewriteRule ^profile profile.html [NC]
+RewriteRule ^userTools /src/pages/usersEdit.html [NC]
+RewriteRule ^companyTools /src/pages/companysEdit.html [NC]

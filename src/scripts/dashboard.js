@@ -2,7 +2,39 @@ import { Notify } from "./class/Notify.js";
 import { Api } from "./class/Api.js";
 
 function adminHome() {
+    const place = document.querySelector('section');
+    place.innerHTML = '';
+    const divs = [document.createElement('div'), document.createElement('div'), document.createElement('div')];
+    const i = [document.createElement('i'), document.createElement('i')];
+    const span = [document.createElement('span'), document.createElement('span')];
+    const h3 = [document.createElement('h3'), document.createElement('h3')];
+    const p = [document.createElement('p'), document.createElement('p')];
 
+    divs[0].id = 'tiles';
+    //Tile 1
+    i[0].className = 'bx bx-list-ul'
+    h3[0].innerText = 'Usuários'
+    p[0].innerText = 'Ferramentas para gerenciar usuários.'
+    span[0].append(h3[0], p[0]);
+    //Tile 2
+    i[1].className = 'bx bx-intersect';
+    h3[1].innerText = 'Gerenciar Empresas/Departamentos';
+    p[1].innerText = 'Ferramentas para gerenciar empresas/departamentos.'
+    span[1].append(h3[1], p[1]);
+
+    divs[1].append(i[0], span[0]);
+    divs[2].append(i[1], span[1]);
+
+    divs[0].append(divs[1], divs[2]);
+    place.append(divs[0]);
+
+    divs[1].addEventListener('click', () => {
+        window.location.href = './userTools';
+    });
+
+    divs[2].addEventListener('click', () => {
+        window.location.href = '.companyTools';
+    });
 }
 
 

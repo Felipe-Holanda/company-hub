@@ -221,6 +221,18 @@ export class Api {
         return allSectors
     }
 
+    static async departmentCreate(body) {
+        const department = await fetch(`http://localhost:6278/departments`, {
+            method: "POST",
+            headers: this.headers,
+            body: JSON.stringify(body)
+        })
+            .then((res) => res.json())
+            .then(res => res)
+            .catch(err => Notify.now(false, 5000, `API: ${err}`))
+        return department
+    }
+
     static async departamentCompany() {
         const departCompanys = await fetch(`http://localhost:6278/departments/`, {
             method: "GET",
