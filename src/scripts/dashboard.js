@@ -29,11 +29,11 @@ function adminHome() {
     place.append(divs[0]);
 
     divs[1].addEventListener('click', () => {
-        window.location.href = './userTools';
+        window.location.href = './src/pages/usersEdit.html';
     });
 
     divs[2].addEventListener('click', () => {
-        window.location.href = '.companyTools';
+        window.location.href = './src/pages/companyEdit.html';
     });
 }
 
@@ -80,24 +80,28 @@ function home() {
             const ul = document.createElement('ul');
             const h1 = document.createElement('h1');
 
-            h1.innerText = 'Colaboradores do mesmo setor que você';
-
             const fetched = Api.userDepartamentWork();
 
-            if (fetched.length > 0) {
-                fetched.users.forEach(element => {
-                    ul.innerHTML += `
+            fetched.then((data) => {
+                h1.innerText = `Colaboradores do setor ${data[0].description}`;
+                if (data[0].users.length > 0) {
+                    data[0].users.forEach((user) => {
+                        ul.innerHTML += `
             <li>
-                <p><b>Nome:</b> ${element.username}</p>
-                <p><b>Email:</b> ${element.email}</p>
-                <p><b>Experiência Profissional:</b> ${element.professional_level}</p>
+                <p><b>Nome:</b> ${user.username}</p>
+                <p><b>Email:</b> ${user.email}</p>
+                <p><b>Experiência Profissional:</b> ${user.professional_level}</p>
             </li>
             `
-                })
-            } else {
-                h1.innerText = 'Você não possui colegas no mesmo setor que você.';
+                    });
+                } else {
+                    h1.innerText = `Não há outros colaboradores no setor ${data[0].description}`;
+                }
 
-            }
+
+
+            })
+
 
             div.id = 'list'
             div.append(ul);

@@ -24,6 +24,11 @@ if (uuid == null || uuid == undefined) {
 li[0].addEventListener('click', (e) => {
     if (window.location.pathname == '/dashboard') {
         home()
+    } else if (window.location.pathname == '/src/pages/usersEdit.html') {
+        window.location.href = '../../dashboard.html'
+    } else if (window.location.pathname == '/src/pages/companyEdit.html') {
+        window.location.href = '../../dashboard.html'
+
     } else {
         window.location.href = './dashboard.html'
     }
@@ -32,7 +37,8 @@ li[0].addEventListener('click', (e) => {
 li[1].addEventListener('click', (e) => {
     if (window.location.pathname == '/dashboard' || window.location.pathname == '/dashboard.html') {
         window.location.href = './profile.html';
-    } else {
+    }
+    else {
         alert('Você já está aqui...')
     }
 })

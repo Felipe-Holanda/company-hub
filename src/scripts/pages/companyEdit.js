@@ -75,7 +75,8 @@ allBtn[2].addEventListener('click', () => {
 
     i.className = 'bx bx-x'
     h1.innerText = 'Lista de setores'
-    nav.append(h1, i)
+    nav.append(h1)
+    nav.append(i)
 
     Api.listedSectors().then(res => {
         res.forEach(element => {
@@ -86,7 +87,5 @@ allBtn[2].addEventListener('click', () => {
     span.append(div)
     body.append(span)
 
-    i.addEventListener('click', () => {
-        span.remove()
-    })
+
 })

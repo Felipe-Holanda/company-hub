@@ -60,7 +60,7 @@ nav button:hover{
     padding: 1em;
     border-radius: 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #modal #modalContent input{
@@ -89,13 +89,11 @@ nav button:hover{
 #modal #modalContent nav{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
 }
 
 #modal #modalContent i{
-    top: 1em;
-    right: 1em;
     font-size: 1.5em;
     color: rgb(155, 114, 235);
     background-color: rgb(240, 240, 240);
