@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./../styles/dashboard.css">
+    <link rel="stylesheet" href="./../styles/notify.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Orbital Suite | Gerenciar usuários</title>
+</head>
+<body>              
+    <header>
+        <i class='bx bx-menu'></i>
+        <h2>Bem vindo de volta<span></span>!</h2>
+    </header>
+    <main>
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <i class='bx bx-home'></i>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <i class='bx bx-user'></i>
+                    <span>Perfil</span>
+                </li>
+                <li>
+                    <i class='bx bx-log-out'></i>
+                    <span>Sair</span>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div id="menuSelect">
+                <select>
+                    <option value="0">Escolha um e-mail</option>
+                    <optgroup id="wDeps" label="Com departamento">
+
+                    </optgroup>
+                    <optgroup id='noDeps' label="Sem departamento">
+                        
+                    </optgroup>
+                </select>
+                <nav>
+                    <button>Editar</button>
+                    <button>Contratar funcionário</button>
+                    <button>Demitir funcionário</button>
+                    <button>Excluir conta</button>
+                </nav>
+            </div>
+            <div id="contentMain">
+                <input type="text" placeholder="Nome" disabled>
+                <input type="email" placeholder="Email" disabled>
+                <input type="password" placeholder="Senha" disabled>
+                <select id="profissional">
+                    <!--professional_level must be one of these: estágio, júnior, pleno, sênior-->
+                    <option value="null">Escolha um nível profissional</option>
+                    <option value="estágio">Estágio</option>
+                    <option value="júnior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="sênior">Sênior</option>
+                </select>
+                <select id="modalidade">
+                    <option value="null">Escolha uma modalidade</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="hibrido">Hibrido</option>
+                    <option value="home office">Home Office</option>
+                </select>
+                <input type="text" placeholder="Administrador" disabled>
+                <nav>
+                    <button>Confirmar alterações</button>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/dashroots.js"></script>
+    <script type="module" src="../scripts/pages/usersEdit.js"></script>
+</body>
+</html>

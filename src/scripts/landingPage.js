@@ -2,15 +2,19 @@ document.getElementById('done').style.display = 'none'
 
 const buttons = document.querySelectorAll('button');
 
-buttons[0].addEventListener('click', function (e) {
-    window.location.href = './auth.html'
+buttons[0].addEventListener('click', () => {
+
 })
 
 buttons[1].addEventListener('click', function (e) {
-    window.location.href = './auth.html'
+    window.location.href = './auth'
 })
 
 buttons[2].addEventListener('click', function (e) {
+    window.location.href = './auth'
+})
+
+buttons[3].addEventListener('click', function (e) {
     e.preventDefault()
     document.getElementById('notYet').animate([
         { opacity: 1 },

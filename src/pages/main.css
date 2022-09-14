@@ -1,0 +1,114 @@
+#menuSelect{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+select{
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    margin: 1em;
+}
+
+nav button{
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+nav button:hover{
+    background-color: #333;
+    cursor: pointer;
+}
+
+#contentMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contentMain input{
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+#modal #modalContent{
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal #modalContent input{
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#modal #modalContent button{
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+#modal #modalContent button:hover{
+    background-color: #333;
+    cursor: pointer;
+}
+
+#modal #modalContent nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modal #modalContent i{
+    top: 1em;
+    right: 1em;
+    font-size: 1.5em;
+    color: rgb(155, 114, 235);
+    background-color: rgb(240, 240, 240);
+    padding: .2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#modal select{
+    margin: 1em;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

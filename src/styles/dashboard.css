@@ -1,0 +1,379 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header{
+    background: rgb(118,71,212);
+    background: linear-gradient(66deg, rgba(118,71,212,1) 0%, rgba(178,137,239,1) 100%); 
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+
+header i{
+    font-weight: bold;
+    font-size: 33px;
+    background-color: rgb(138, 92, 228);
+    padding: .62em;
+    margin-right: 1em;
+}
+
+header i:hover{
+    background-color: rgb(155, 114, 235);
+    cursor: pointer;
+}
+
+main #navbar{
+    position: fixed;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 1em;
+    z-index: 99;
+    top: 4.6em;
+    flex-direction: column;
+    background: rgb(108,63,196);
+    background: linear-gradient(175deg, rgba(108,63,196,1) 0%, rgba(161,119,223,1) 100%); 
+    color: white
+}
+
+nav span{
+    font-size: 18px;
+    display: none;
+    font-weight: bold;
+
+}
+
+nav ul{
+    font-size: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li i{
+    padding: .2em
+}
+
+nav ul li{
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    background-color: rgb(124, 76, 219);
+    border-radius: .5em;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 6em;
+    padding-top: 5em;
+}
+
+#tiles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em;
+}
+
+#tiles div{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 1em 0 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 0;
+    margin: 1em;
+}
+
+@keyframes scaleUp{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.05);
+    }
+}
+
+@keyframes scaleDown{
+    from{
+        transform: scale(1.05);
+    }to{
+        transform: scale(1);
+    }
+}
+
+#tiles div:hover{
+    animation: scaleUp 0.2s ease-in-out forwards;
+    cursor: pointer;
+}
+
+#tiles div:not(:hover){
+    animation: scaleDown 0.2s ease-in-out forwards;
+}
+
+#tiles div i{
+    font-size: 40px;
+    padding: 1em;
+    background-color: rgb(138, 92, 228);
+    color: white;
+    border-radius: 0 0 0 .4em;   
+}
+
+#tiles div span{
+    font-size: 20px;
+    padding: 1em;
+    line-height: 17px;
+}
+
+.green{
+    background-color: rgb(0, 140, 0);
+}
+
+.red{
+    background-color: rgb(140, 0, 0);
+}
+
+.orange{
+    background-color: rgb(168, 84, 0);
+}
+
+.purple{
+    background-color: rgb(138, 92, 228);
+}
+
+.green:hover{
+    background-color: rgb(0, 180, 0);
+}
+
+.red:hover{
+    background-color: rgb(180, 0, 0);
+}
+
+.orange:hover{
+    background-color: rgb(197, 104, 11);
+}
+
+.purple:hover{
+    background-color: rgb(154, 113, 236);
+}
+
+#company div{
+    background-color: white;
+    padding: .5em;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    max-width: fit-content;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+#company div:hover{
+    cursor: pointer;
+    animation: scaleUp 0.2s ease-in-out forwards;
+}
+
+#company div:not(:hover){
+    animation: scaleDown 0.2s ease-in-out forwards;
+}
+
+#company h4{
+    margin: .5em
+}
+
+#company i{
+    color: white;
+    font-size: 25px; 
+    padding: .5em;
+    border-radius: 50%;
+}
+
+#company nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile input, #iterationMenu input{
+    margin: .5em;
+    padding: 1em 2.5em;
+    border: none;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#profile button{
+    margin: .5em;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-color: rgb(138, 92, 228);
+    color: white;
+}
+
+#profile button:hover{
+    cursor: pointer;
+    background-color: rgb(155, 114, 235);
+}
+
+#profile button:disabled{
+    background-color: rgb(145, 134, 168);
+    cursor: not-allowed;
+}
+
+input:disabled{
+    background-color: rgb(225, 225, 225);
+    color: black;
+    cursor: not-allowed;
+}
+
+#modal{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 100;
+}
+
+#modal #modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 1em;
+    padding: 2em;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#modal #modal-content .bx-x{
+    font-size: 30px;
+    color: rgb(138, 92, 228);
+    align-self: flex-end;
+    cursor: pointer;
+    transform: translate(0em, -2em);
+    position: inherit;
+    background-color: gainsboro;
+    border-radius: 50%;
+}
+
+#modal-content table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#modal-content table td{
+    padding: 1em;
+    text-align: center;
+}
+
+#modal-content table i{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    padding: .5em;
+    border-radius: 50%;
+}
+
+#modal-content table tr:nth-child(even){
+    background-color: rgb(225, 225, 225);
+}
+
+#exibeResultado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+#exibeResultado select, #iterationMenu select{
+    margin: 1em;
+    padding: 1em 2.2em;
+    border: none;
+    background-color: white;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#exibeResultado select:hover, #iterationMenu select:hover{
+    cursor: pointer;
+}
+
+#exibeResultado button, #iterationMenu button{
+    margin: 1em;
+    padding: 1em;
+    border: none;
+    background-color: rgb(138, 92, 228);
+    color: white;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#iterationMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#exibeResultado button:hover, #iterationMenu button:hover{
+    cursor: pointer;
+    background-color: rgb(155, 114, 235);
+}
+
+section ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section ul li{
+    margin: 1em;
+    background-color: white;
+    padding: 1em;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+section ul li:hover{
+    cursor: pointer;
+    animation: scaleUp 0.2s ease-in-out forwards;
+}
+
+section ul li:not(:hover){
+    animation: scaleDown 0.2s ease-in-out forwards;
+}

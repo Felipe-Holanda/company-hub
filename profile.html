@@ -7,9 +7,9 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./src/styles/dashboard.css">
     <link rel="stylesheet" href="./src/styles/notify.css">
-    <title>Orbital Suite | Dashboard</title>
+    <title>Orbital Suite | Perfil</title>
 </head>
-<body>              
+<body>
     <header>
         <i class='bx bx-menu'></i>
         <h2>Bem vindo de volta<span></span>!</h2>
@@ -32,10 +32,23 @@
             </ul>
         </nav>
         <section>
-            
+            <div id="profile">
+                <h1>Visualizar/editar meus dados</h1>
+                <div>
+                    <input id='username' type="text" placeholder="Nome" disabled>
+                    <input id='email' type="text" placeholder="E-mail" disabled>
+                    <input id='newPassword' type="password" placeholder="Nova senha" disabled>
+                    <input id='confirmPassword' type="password" placeholder="Confirmar nova senha" disabled>  
+                    <nav>
+                        <button id="update" disabled>Atualizar dados</button>
+                        <button id="edit">Editar dados</button>
+                    </nav>
+                </div>
+            </div>
         </section>
     </main>
-    <script type="module" src="./src/scripts/dashboard.js"></script>
     <script src="./src/scripts/dashroots.js"></script>
+    <script src="./src/scripts/profile.js"></script>
+    <script type="module" src="./src/scripts/app.js"></script>
 </body>
 </html>

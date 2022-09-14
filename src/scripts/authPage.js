@@ -51,6 +51,3 @@ closeBtn[1].addEventListener('click', function (e) {
 document.querySelector('header i').addEventListener('click', (e) => {
     window.location.href = './'
 })
-
-const slideDown = [{ transform: 'translateY(-100em)' }, { transform: 'translateY(0em)' }]
-const slideUp = [{ transform: 'translateY(0em)' }, { transform: 'translateY(-100em)' }]

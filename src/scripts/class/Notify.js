@@ -1,4 +1,8 @@
 export class Notify {
+
+    static slideDown = [{ transform: 'translateY(-100em)' }, { transform: 'translateY(0em)' }]
+    static slideUp = [{ transform: 'translateY(0em)' }, { transform: 'translateY(-100em)' }]
+
     static now(type, interval, message) {
         const body = document.querySelector('body')
         const span = document.createElement('span')
@@ -15,13 +19,13 @@ export class Notify {
         }
 
         body.append(span);
-        span.animate(slideDown, { duration: 199 });
+        span.animate(this.slideDown, { duration: 2300, iterations: 1 });
         setTimeout(() => {
-            span.animate(slideUp, { duration: interval - 199 })
-        }, interval - 200)
+            span.animate(this.slideUp, { duration: interval - 199 })
+        }, interval + (interval / 2) - 200)
 
         setTimeout(() => {
             span.remove()
-        }, interval)
+        }, interval + (interval / 2))
     }
 }

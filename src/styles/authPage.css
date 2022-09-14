@@ -185,17 +185,3 @@ form div span{
 form div span:hover{
     background-color: rgb(193, 193, 193);
 }
-
-#notify{
-    position: fixed;
-    z-index: 99;
-    color: white;
-    margin: .5em;
-    padding: .5em;
-    top: 0;
-    left: 80%;
-    font-weight: bold;
-    border-radius: .2em;
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
-    outline: .002em solid white;
-}
